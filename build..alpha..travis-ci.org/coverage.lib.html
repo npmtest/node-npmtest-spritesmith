@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-spritesmith/spritesmith/src/smith.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-spritesmith/node_modules/spritesmith/src/smith.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-spritesmith">npmtest-spritesmith (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-spritesmith/spritesmith/src/smith.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-spritesmith/node_modules/spritesmith/src/smith.js</span></h1>
     <h2>
         
         Statements: <span class="metric">11.22% <small>(11 / 98)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-spritesmith/spritesmith/src/</a> » smith.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-spritesmith/node_modules/spritesmith/src/</a> &#187; smith.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -666,77 +668,77 @@ var algorithmDefault = 'binary-tree';
 var SPEC_VERSION_RANGE = '&gt;=2.0.0 &lt;3.0.0';
 &nbsp;
 // Define our spritesmith constructor
-<span class="fstat-no" title="function not covered">function Spritesmith(params) {</span>
+<span class="fstat-no" title="function not covered" >function Spritesmith(params) {</span>
   // Process our parameters
-<span class="cstat-no" title="statement not covered">  params = params || {};</span>
-<span class="cstat-no" title="statement not covered">  var engineName = params.engine || engineDefault;</span>
-<span class="cstat-no" title="statement not covered">  var Engine = engineName;</span>
+<span class="cstat-no" title="statement not covered" >  params = params || {};</span>
+<span class="cstat-no" title="statement not covered" >  var engineName = params.engine || engineDefault;</span>
+<span class="cstat-no" title="statement not covered" >  var Engine = engineName;</span>
 &nbsp;
   // If the engine is a `require` path, attempt to load it
-<span class="cstat-no" title="statement not covered">  if (typeof engineName === 'string') {</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof engineName === 'string') {</span>
     // Attempt to resolve the engine to verify it is installed at all
-<span class="cstat-no" title="statement not covered">    try {</span>
-<span class="cstat-no" title="statement not covered">      require.resolve(engineName);</span>
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >      require.resolve(engineName);</span>
     } catch (err) {
-<span class="cstat-no" title="statement not covered">      console.error('Attempted to find spritesmith engine "' + engineName + '" but could not.');</span>
-<span class="cstat-no" title="statement not covered">      console.error('Please verify you have installed "' + engineName + '" and saved it to your `package.json`');</span>
-<span class="cstat-no" title="statement not covered">      console.error('');</span>
-<span class="cstat-no" title="statement not covered">      console.error('    npm install ' + engineName + ' --save-dev');</span>
-<span class="cstat-no" title="statement not covered">      console.error('');</span>
-<span class="cstat-no" title="statement not covered">      throw err;</span>
+<span class="cstat-no" title="statement not covered" >      console.error('Attempted to find spritesmith engine "' + engineName + '" but could not.');</span>
+<span class="cstat-no" title="statement not covered" >      console.error('Please verify you have installed "' + engineName + '" and saved it to your `package.json`');</span>
+<span class="cstat-no" title="statement not covered" >      console.error('');</span>
+<span class="cstat-no" title="statement not covered" >      console.error('    npm install ' + engineName + ' --save-dev');</span>
+<span class="cstat-no" title="statement not covered" >      console.error('');</span>
+<span class="cstat-no" title="statement not covered" >      throw err;</span>
     }
 &nbsp;
     // Attempt to load the engine
-<span class="cstat-no" title="statement not covered">    try {</span>
-<span class="cstat-no" title="statement not covered">      Engine = require(engineName);</span>
-<span class="cstat-no" title="statement not covered">      if (typeof Engine !== 'function') {</span>
-<span class="cstat-no" title="statement not covered">        Engine = Engine.default;</span>
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >      Engine = require(engineName);</span>
+<span class="cstat-no" title="statement not covered" >      if (typeof Engine !== 'function') {</span>
+<span class="cstat-no" title="statement not covered" >        Engine = Engine.default;</span>
       }
     } catch (err) {
-<span class="cstat-no" title="statement not covered">      console.error('Attempted to load spritesmith engine "' + engineName + '" but could not.');</span>
-<span class="cstat-no" title="statement not covered">      console.error('Please verify you have installed its dependencies. Documentation should be available at ');</span>
-<span class="cstat-no" title="statement not covered">      console.error('');</span>
+<span class="cstat-no" title="statement not covered" >      console.error('Attempted to load spritesmith engine "' + engineName + '" but could not.');</span>
+<span class="cstat-no" title="statement not covered" >      console.error('Please verify you have installed its dependencies. Documentation should be available at ');</span>
+<span class="cstat-no" title="statement not covered" >      console.error('');</span>
       // TODO: Consider using pkg.homepage and pkg.repository
-<span class="cstat-no" title="statement not covered">      console.error('    https://npm.im/' + encodeURIComponent(engineName));</span>
-<span class="cstat-no" title="statement not covered">      console.error('');</span>
-<span class="cstat-no" title="statement not covered">      throw err;</span>
+<span class="cstat-no" title="statement not covered" >      console.error('    https://npm.im/' + encodeURIComponent(engineName));</span>
+<span class="cstat-no" title="statement not covered" >      console.error('');</span>
+<span class="cstat-no" title="statement not covered" >      throw err;</span>
     }
   }
 &nbsp;
   // Verify we are on a matching `specVersion`
-<span class="cstat-no" title="statement not covered">  if (!semver.satisfies(Engine.specVersion, SPEC_VERSION_RANGE)) {</span>
-<span class="cstat-no" title="statement not covered">    throw new Error('Expected `engine` to have `specVersion` within "' + SPEC_VERSION_RANGE + '" ' +</span>
+<span class="cstat-no" title="statement not covered" >  if (!semver.satisfies(Engine.specVersion, SPEC_VERSION_RANGE)) {</span>
+<span class="cstat-no" title="statement not covered" >    throw new Error('Expected `engine` to have `specVersion` within "' + SPEC_VERSION_RANGE + '" ' +</span>
       'but it was "' + Engine.specVersion + '". Please verify you are on the latest version of your engine: ' +
       '`npm install my-engine@latest`');
   }
 &nbsp;
   // Create and save our engine for later
-<span class="cstat-no" title="statement not covered">  this.engine = new Engine(params.engineOpts || {});</span>
+<span class="cstat-no" title="statement not covered" >  this.engine = new Engine(params.engineOpts || {});</span>
 }
 // Gist of params: {src: files, engine: 'pixelsmith', algorithm: 'binary-tree'}
 // Gist of result: image: buffer, coordinates: {filepath: {x, y, width, height}}, properties: {width, height}
-Spritesmith.run = <span class="fstat-no" title="function not covered">function (params, callback) {</span>
+Spritesmith.run = <span class="fstat-no" title="function not covered" >function (params, callback) {</span>
   // Create a new spritesmith with our parameters
-<span class="cstat-no" title="statement not covered">  var spritesmith = new Spritesmith(params);</span>
+<span class="cstat-no" title="statement not covered" >  var spritesmith = new Spritesmith(params);</span>
 &nbsp;
   // In an async fashion, create our images
-<span class="cstat-no" title="statement not covered">  spritesmith.createImages(params.src, <span class="fstat-no" title="function not covered">function handleImages (err, images) {</span></span>
+<span class="cstat-no" title="statement not covered" >  spritesmith.createImages(params.src, <span class="fstat-no" title="function not covered" >function handleImages (err, images) {</span></span>
     // If there was an error, callback with it
-<span class="cstat-no" title="statement not covered">    if (err) {</span>
-<span class="cstat-no" title="statement not covered">      return callback(err);</span>
+<span class="cstat-no" title="statement not covered" >    if (err) {</span>
+<span class="cstat-no" title="statement not covered" >      return callback(err);</span>
     }
 &nbsp;
     // Otherwise, process our images, concat our image, and callback
     // DEV: We don't want to risk dropped `data` events due to calling back with a stream
-<span class="cstat-no" title="statement not covered">    var spriteData = spritesmith.processImages(images, params);</span>
+<span class="cstat-no" title="statement not covered" >    var spriteData = spritesmith.processImages(images, params);</span>
 &nbsp;
     // If an error occurs on the image, then callback with it
-<span class="cstat-no" title="statement not covered">    spriteData.image.on('error', callback);</span>
+<span class="cstat-no" title="statement not covered" >    spriteData.image.on('error', callback);</span>
 &nbsp;
     // Concatenate our image into a buffer
-<span class="cstat-no" title="statement not covered">    spriteData.image.pipe(concat({encoding: 'buffer'}, <span class="fstat-no" title="function not covered">function handleImage (buff) {</span></span>
+<span class="cstat-no" title="statement not covered" >    spriteData.image.pipe(concat({encoding: 'buffer'}, <span class="fstat-no" title="function not covered" >function handleImage (buff) {</span></span>
       // Callback with all our info
-<span class="cstat-no" title="statement not covered">      callback(null, {</span>
+<span class="cstat-no" title="statement not covered" >      callback(null, {</span>
         coordinates: spriteData.coordinates,
         properties: spriteData.properties,
         image: buff
@@ -745,48 +747,48 @@ Spritesmith.run = <span class="fstat-no" title="function not covered">function (
   });
 };
 Spritesmith.prototype = {
-  createImages: <span class="fstat-no" title="function not covered">function (files, callback) {</span>
+  createImages: <span class="fstat-no" title="function not covered" >function (files, callback) {</span>
     // Forward image creation to our engine
-<span class="cstat-no" title="statement not covered">    this.engine.createImages(files, <span class="fstat-no" title="function not covered">function handleImags (err, images) {</span></span>
+<span class="cstat-no" title="statement not covered" >    this.engine.createImages(files, <span class="fstat-no" title="function not covered" >function handleImags (err, images) {</span></span>
       // If there was an error, callback with it
-<span class="cstat-no" title="statement not covered">      if (err) {</span>
-<span class="cstat-no" title="statement not covered">        return callback(err);</span>
+<span class="cstat-no" title="statement not covered" >      if (err) {</span>
+<span class="cstat-no" title="statement not covered" >        return callback(err);</span>
       }
 &nbsp;
       // Otherwise, iterate over the images and save their paths (required for coordinates)
-<span class="cstat-no" title="statement not covered">      images.forEach(<span class="fstat-no" title="function not covered">function saveImagePath (img, i) {</span></span>
+<span class="cstat-no" title="statement not covered" >      images.forEach(<span class="fstat-no" title="function not covered" >function saveImagePath (img, i) {</span></span>
         // DEV: We don't use `Vinyl.isVinyl` since that was introduced in Sep 2015
         //   We want some backwards compatibility with older setups
-<span class="cstat-no" title="statement not covered">        var file = files[i];</span>
-<span class="cstat-no" title="statement not covered">        img._filepath = typeof file === 'object' ? file.path : file;</span>
+<span class="cstat-no" title="statement not covered" >        var file = files[i];</span>
+<span class="cstat-no" title="statement not covered" >        img._filepath = typeof file === 'object' ? file.path : file;</span>
       });
 &nbsp;
       // Callback with our images
-<span class="cstat-no" title="statement not covered">      callback(null, images);</span>
+<span class="cstat-no" title="statement not covered" >      callback(null, images);</span>
     });
   },
-  processImages: <span class="fstat-no" title="function not covered">function (images, options) {</span>
+  processImages: <span class="fstat-no" title="function not covered" >function (images, options) {</span>
     // Set up our algorithm/layout placement and export configuration
-<span class="cstat-no" title="statement not covered">    options = options || {};</span>
-<span class="cstat-no" title="statement not covered">    var algorithmName = options.algorithm || algorithmDefault;</span>
-<span class="cstat-no" title="statement not covered">    var layer = new Layout(algorithmName, options.algorithmOpts);</span>
-<span class="cstat-no" title="statement not covered">    var padding = options.padding || 0;</span>
-<span class="cstat-no" title="statement not covered">    var exportOpts = options.exportOpts || {};</span>
-<span class="cstat-no" title="statement not covered">    var packedObj;</span>
+<span class="cstat-no" title="statement not covered" >    options = options || {};</span>
+<span class="cstat-no" title="statement not covered" >    var algorithmName = options.algorithm || algorithmDefault;</span>
+<span class="cstat-no" title="statement not covered" >    var layer = new Layout(algorithmName, options.algorithmOpts);</span>
+<span class="cstat-no" title="statement not covered" >    var padding = options.padding || 0;</span>
+<span class="cstat-no" title="statement not covered" >    var exportOpts = options.exportOpts || {};</span>
+<span class="cstat-no" title="statement not covered" >    var packedObj;</span>
 &nbsp;
     // Generate stream and info for returning
-<span class="cstat-no" title="statement not covered">    var imageStream = through2();</span>
-<span class="cstat-no" title="statement not covered">    var retObj = {image: imageStream};</span>
+<span class="cstat-no" title="statement not covered" >    var imageStream = through2();</span>
+<span class="cstat-no" title="statement not covered" >    var retObj = {image: imageStream};</span>
 &nbsp;
     // Add our images to our canvas (dry run)
-<span class="cstat-no" title="statement not covered">    images.forEach(<span class="fstat-no" title="function not covered">function (img) {</span></span>
+<span class="cstat-no" title="statement not covered" >    images.forEach(<span class="fstat-no" title="function not covered" >function (img) {</span></span>
       // Save the non-padded properties as meta data
-<span class="cstat-no" title="statement not covered">      var width = img.width;</span>
-<span class="cstat-no" title="statement not covered">      var height = img.height;</span>
-<span class="cstat-no" title="statement not covered">      var meta = {img: img, actualWidth: width, actualHeight: height};</span>
+<span class="cstat-no" title="statement not covered" >      var width = img.width;</span>
+<span class="cstat-no" title="statement not covered" >      var height = img.height;</span>
+<span class="cstat-no" title="statement not covered" >      var meta = {img: img, actualWidth: width, actualHeight: height};</span>
 &nbsp;
       // Add the item with padding to our layer
-<span class="cstat-no" title="statement not covered">      layer.addItem({</span>
+<span class="cstat-no" title="statement not covered" >      layer.addItem({</span>
         width: width + padding,
         height: height + padding,
         meta: meta
@@ -795,16 +797,16 @@ Spritesmith.prototype = {
 &nbsp;
     // Then, output the coordinates
     // Export and saved packedObj for later
-<span class="cstat-no" title="statement not covered">    packedObj = layer['export']();</span>
+<span class="cstat-no" title="statement not covered" >    packedObj = layer['export']();</span>
 &nbsp;
     // Extract the coordinates
-<span class="cstat-no" title="statement not covered">    var coordinates = {};</span>
-<span class="cstat-no" title="statement not covered">    var packedItems = packedObj.items;</span>
-<span class="cstat-no" title="statement not covered">    packedItems.forEach(<span class="fstat-no" title="function not covered">function (item) {</span></span>
-<span class="cstat-no" title="statement not covered">      var meta = item.meta;</span>
-<span class="cstat-no" title="statement not covered">      var img = meta.img;</span>
-<span class="cstat-no" title="statement not covered">      var name = img._filepath;</span>
-<span class="cstat-no" title="statement not covered">      coordinates[name] = {</span>
+<span class="cstat-no" title="statement not covered" >    var coordinates = {};</span>
+<span class="cstat-no" title="statement not covered" >    var packedItems = packedObj.items;</span>
+<span class="cstat-no" title="statement not covered" >    packedItems.forEach(<span class="fstat-no" title="function not covered" >function (item) {</span></span>
+<span class="cstat-no" title="statement not covered" >      var meta = item.meta;</span>
+<span class="cstat-no" title="statement not covered" >      var img = meta.img;</span>
+<span class="cstat-no" title="statement not covered" >      var name = img._filepath;</span>
+<span class="cstat-no" title="statement not covered" >      coordinates[name] = {</span>
         x: item.x,
         y: item.y,
         width: meta.actualWidth,
@@ -813,62 +815,62 @@ Spritesmith.prototype = {
     });
 &nbsp;
     // Save the coordinates
-<span class="cstat-no" title="statement not covered">    retObj.coordinates = coordinates;</span>
+<span class="cstat-no" title="statement not covered" >    retObj.coordinates = coordinates;</span>
 &nbsp;
     // Then, generate a canvas
     // Grab and fallback the width/height
-<span class="cstat-no" title="statement not covered">    var width = Math.max(packedObj.width || 0, 0);</span>
-<span class="cstat-no" title="statement not covered">    var height = Math.max(packedObj.height || 0, 0);</span>
+<span class="cstat-no" title="statement not covered" >    var width = Math.max(packedObj.width || 0, 0);</span>
+<span class="cstat-no" title="statement not covered" >    var height = Math.max(packedObj.height || 0, 0);</span>
 &nbsp;
     // If there are items
-<span class="cstat-no" title="statement not covered">    var itemsExist = packedObj.items.length;</span>
-<span class="cstat-no" title="statement not covered">    if (itemsExist) {</span>
+<span class="cstat-no" title="statement not covered" >    var itemsExist = packedObj.items.length;</span>
+<span class="cstat-no" title="statement not covered" >    if (itemsExist) {</span>
       // Remove the last item's padding
-<span class="cstat-no" title="statement not covered">      width -= padding;</span>
-<span class="cstat-no" title="statement not covered">      height -= padding;</span>
+<span class="cstat-no" title="statement not covered" >      width -= padding;</span>
+<span class="cstat-no" title="statement not covered" >      height -= padding;</span>
     }
 &nbsp;
     // Export the total width and height of the generated canvas
-<span class="cstat-no" title="statement not covered">    retObj.properties = {</span>
+<span class="cstat-no" title="statement not covered" >    retObj.properties = {</span>
       width: width,
       height: height
     };
 &nbsp;
     // After we return the stream and info
-<span class="cstat-no" title="statement not covered">    var that = this;</span>
-<span class="cstat-no" title="statement not covered">    process.nextTick(<span class="fstat-no" title="function not covered">function handleNextTick () {</span></span>
+<span class="cstat-no" title="statement not covered" >    var that = this;</span>
+<span class="cstat-no" title="statement not covered" >    process.nextTick(<span class="fstat-no" title="function not covered" >function handleNextTick () {</span></span>
       // If there are no items, return with an empty stream
-<span class="cstat-no" title="statement not covered">      var canvas;</span>
-<span class="cstat-no" title="statement not covered">      if (!itemsExist) {</span>
-<span class="cstat-no" title="statement not covered">        imageStream.push(null);</span>
-<span class="cstat-no" title="statement not covered">        return;</span>
+<span class="cstat-no" title="statement not covered" >      var canvas;</span>
+<span class="cstat-no" title="statement not covered" >      if (!itemsExist) {</span>
+<span class="cstat-no" title="statement not covered" >        imageStream.push(null);</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
       // Otherwise, generate and export our canvas
       } else {
         // Crete our canvas
-<span class="cstat-no" title="statement not covered">        canvas = that.engine.createCanvas(width, height);</span>
+<span class="cstat-no" title="statement not covered" >        canvas = that.engine.createCanvas(width, height);</span>
 &nbsp;
         // Add the images onto canvas
-<span class="cstat-no" title="statement not covered">        try {</span>
-<span class="cstat-no" title="statement not covered">          packedObj.items.forEach(<span class="fstat-no" title="function not covered">function addImage (item) {</span></span>
-<span class="cstat-no" title="statement not covered">            var img = item.meta.img;</span>
-<span class="cstat-no" title="statement not covered">            canvas.addImage(img, item.x, item.y);</span>
+<span class="cstat-no" title="statement not covered" >        try {</span>
+<span class="cstat-no" title="statement not covered" >          packedObj.items.forEach(<span class="fstat-no" title="function not covered" >function addImage (item) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var img = item.meta.img;</span>
+<span class="cstat-no" title="statement not covered" >            canvas.addImage(img, item.x, item.y);</span>
           });
         } catch (err) {
-<span class="cstat-no" title="statement not covered">          imageStream.emit('error', err);</span>
-<span class="cstat-no" title="statement not covered">          return;</span>
+<span class="cstat-no" title="statement not covered" >          imageStream.emit('error', err);</span>
+<span class="cstat-no" title="statement not covered" >          return;</span>
         }
 &nbsp;
         // Export our canvas
-<span class="cstat-no" title="statement not covered">        var exportStream = canvas['export'](exportOpts);</span>
-<span class="cstat-no" title="statement not covered">        exportStream.on('error', <span class="fstat-no" title="function not covered">function forwardError (err) {</span></span>
-<span class="cstat-no" title="statement not covered">          imageStream.emit('error', err);</span>
+<span class="cstat-no" title="statement not covered" >        var exportStream = canvas['export'](exportOpts);</span>
+<span class="cstat-no" title="statement not covered" >        exportStream.on('error', <span class="fstat-no" title="function not covered" >function forwardError (err) {</span></span>
+<span class="cstat-no" title="statement not covered" >          imageStream.emit('error', err);</span>
         });
-<span class="cstat-no" title="statement not covered">        exportStream.pipe(imageStream);</span>
+<span class="cstat-no" title="statement not covered" >        exportStream.pipe(imageStream);</span>
       }
     });
 &nbsp;
     // Return our info
-<span class="cstat-no" title="statement not covered">    return retObj;</span>
+<span class="cstat-no" title="statement not covered" >    return retObj;</span>
   }
 };
 &nbsp;
@@ -876,11 +878,10 @@ Spritesmith.prototype = {
 module.exports = Spritesmith;
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sat Apr 15 2017 20:07:52 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 19:34:40 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
