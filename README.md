@@ -1,6 +1,6 @@
 # npmtest-spritesmith
 
-#### test coverage for  [spritesmith (v3.1.1)](https://github.com/Ensighten/spritesmith)  [![npm package](https://img.shields.io/npm/v/npmtest-spritesmith.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-spritesmith) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-spritesmith.svg)](https://travis-ci.org/npmtest/node-npmtest-spritesmith)
+#### basic test coverage for  [spritesmith (v3.1.1)](https://github.com/Ensighten/spritesmith)  [![npm package](https://img.shields.io/npm/v/npmtest-spritesmith.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-spritesmith) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-spritesmith.svg)](https://travis-ci.org/npmtest/node-npmtest-spritesmith)
 
 #### Utility that takes images and creates a spritesheet with JSON sprite data
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-spritesmith/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-spritesmith/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-spritesmith/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-spritesmith/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-spritesmith/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-spritesmith/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-spritesmith/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-spritesmith/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-spritesmith/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-spritesmith/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-spritesmith/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-spritesmith/build/coverage.html/index.html)
 
@@ -108,7 +108,8 @@
         "pretest": "twolfson-style install",
         "test": "npm run precheck && mocha src-test/ --timeout 60000 --reporter dot && npm run lint"
     },
-    "version": "3.1.1"
+    "version": "3.1.1",
+    "bin": {}
 }
 ```
 
