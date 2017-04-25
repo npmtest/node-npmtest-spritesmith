@@ -133,7 +133,7 @@
 <tspan x="10" y="2090">  │ │       ├─┬ cliui@2.1.0 </tspan>
 <tspan x="10" y="2106">  │ │       │ ├─┬ center-align@0.1.3 </tspan>
 <tspan x="10" y="2122">  │ │       │ │ ├─┬ align-text@0.1.4 </tspan>
-<tspan x="10" y="2138">  │ │       │ │ │ ├── kind-of@3.1.0 </tspan>
+<tspan x="10" y="2138">  │ │       │ │ │ ├── kind-of@3.2.0 </tspan>
 <tspan x="10" y="2154">  │ │       │ │ │ ├── longest@1.0.1 </tspan>
 <tspan x="10" y="2170">  │ │       │ │ │ └── repeat-string@1.6.1 </tspan>
 <tspan x="10" y="2186">  │ │       │ │ └── lazy-cache@1.0.4 </tspan>
